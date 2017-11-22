@@ -1,0 +1,29 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+		//link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+		script(src='/bootstrap/js/bootstrap.min.js')
+	body
+		nav.navbar.navbar-expand-md.navbar-toggleable-md.navbar-light.bg-faded( role="navigation" )
+			button.navbar-toggler.navbar-toggler-right( type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+					span.navbar-toggler-icon 
+			a.navbar-brand(href="#") Sprinkle
+			// Add remaining features to menubar
+			div.collapse.navbar-collapse( id="navbarSupportedContent" )
+				ul.navbar-nav.mr-auto
+					li.nav-itme.active 
+						a.nav-link( href="/") Home
+							span.sr-only (current)
+					li.nav-itme.active 
+						a.nav-link( href="/users") Users
+					li.nav-item.dropdown
+						a.nav-link.dropdown-toggle(id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Select
+						div.dropdown-menu(aria-labelledby="dropdown01")
+							a.dropdown-item(href="#") ABC
+							a.dropdown-item(href="#") PQR
+							a.dropdown-item(href="#") XYZ
+#body-base.body-main
+	block content
